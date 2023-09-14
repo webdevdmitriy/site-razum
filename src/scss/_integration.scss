@@ -1,0 +1,123 @@
+.integration__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.integration__blocks {
+  display: flex;
+  flex-direction: column;
+}
+
+.integration__block {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+  &-img {
+    height: 42px;
+    width: 42px;
+  }
+  &-text {
+    margin-left: 40px;
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url('../images/integration/dot.svg');
+      background-size: 6px 6px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      left: 93px;
+      bottom: -22px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 94px;
+      height: 1px;
+      left: 0px;
+      bottom: -20px;
+      background-color: #c4c4c4;
+    }
+  }
+  &:last-child {
+    .integration__block-text {
+      &::after {
+        content: none;
+      }
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  &-subtitle {
+    font-size: 15px;
+    max-width: 400px;
+  }
+}
+
+.integration__animation {
+  video {
+    width: 500px;
+    height: 555px;
+  }
+}
+
+.integration__text {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  font-size: 24px;
+
+  p {
+    position: relative;
+    // max-width: 260px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .integration__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .integration__animation {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 576px) {
+  .integration__animation {
+    img {
+      width: 90%;
+    }
+  }
+  .integration__text {
+    font-size: 14px;
+    p {
+      max-width: 260px;
+    }
+    p::before {
+      content: url('/images/integration/line.svg');
+      position: absolute;
+      // top: 0px;
+      left: -30px;
+      top: -47px;
+      // width: 50px;
+      // height: 50px;
+    }
+  }
+}

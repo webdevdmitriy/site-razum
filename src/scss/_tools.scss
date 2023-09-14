@@ -1,0 +1,39 @@
+.tools__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tools__text {
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 420px;
+}
+
+.tools__animation {
+  margin-left: 200px;
+  video,
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .tools__inner {
+    flex-direction: column;
+  }
+  .tools__text {
+    order: 2;
+  }
+  .tools__animation {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+}

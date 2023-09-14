@@ -1,0 +1,77 @@
+.ambassadors {
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    max-width: 336px;
+    font-size: 17px;
+  }
+}
+
+.ambassadors__logos {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 30px;
+}
+
+//размеры изображений
+.ambassadors__logo {
+  &_lab {
+    width: 179px;
+    margin-top: 10px;
+  }
+  &_pesc {
+    width: 220px;
+  }
+  &_sit {
+    width: 269px;
+
+    margin-top: 20px;
+  }
+  &_per {
+    width: 309px;
+  }
+  &_spec {
+    width: 280px;
+  }
+  &_eng {
+    width: 280px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .ambassadors__logos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0;
+    // a:last-child {
+    //   grid-column-start: 1;
+    //   grid-column-end: -1;
+    //   img {
+    //     display: block;
+    //     margin: 0 auto;
+    //   }
+    // }
+  }
+}
+@media (max-width: 640px) {
+  .ambassadors__logos {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .ambassadors__logo {
+    &_sit {
+      margin-top: 0px;
+    }
+  }
+}
